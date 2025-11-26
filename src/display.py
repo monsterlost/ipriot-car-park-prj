@@ -9,4 +9,6 @@ class Display:
 
     def update(self, data):
         for key, value in data.items():
+            if key == "message":
+                self.message = value
             print(f"{key}: {value}")

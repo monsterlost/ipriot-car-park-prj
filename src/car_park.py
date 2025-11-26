@@ -38,4 +38,4 @@ class CarPark:
     def update_displays(self):
         data = {"Available Bays": self.available_bays, "Temperature": 20} #todo: temperature variable
         for display in self.displays:
-            display.update(data) #todo: add update() to Display
+            display.update(data)
