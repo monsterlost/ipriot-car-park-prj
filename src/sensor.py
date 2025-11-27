@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-import random #note: may delete later
+import random
 
 
 class Sensor(ABC):
@@ -9,7 +9,7 @@ class Sensor(ABC):
         self.car_park = car_park
 
     def __str__(self):
-        return f"Sensor {id} is {self.is_active}"
+        return f"Sensor {self.id} is {self.is_active}"
 
     @abstractmethod
     def update_car_park(self, plate):
