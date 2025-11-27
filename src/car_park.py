@@ -1,13 +1,15 @@
 from sensor import Sensor
 from display import Display
+from pathlib import Path
 
 
 class CarPark:
-    def __init__(self, location, capacity, plates=None, displays=None):
+    def __init__(self, location, capacity, plates=None, displays=None, log_file = "log.txt"):
         self.location = location
         self.capacity = capacity
         self.plates = plates or [] #list - holds references to license plates represented as strings
         self.displays = displays or [] #list - holds references to instances of displays
+        self.log_file = Path(log_file)
 
     def __str__(self):
         return f"Car park at {self.location}, with {self.capacity} bays"
