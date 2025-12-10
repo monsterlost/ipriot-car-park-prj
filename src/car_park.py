@@ -61,6 +61,7 @@ class CarPark:
 
     @classmethod
     def from_config(cls, config_file=Path("config.json")):
+        # This reads information stored in a json file to initialise a car park
         config_file = config_file if isinstance(config_file, Path) else Path(config_file)
         with config_file.open() as f:
             config = json.load(f)
